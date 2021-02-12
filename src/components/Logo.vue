@@ -11,7 +11,7 @@ export default {
     props:["bienvenue","bounces"],
     data(){
         return {
-            real:true,
+            
         }
     },
     methods:{

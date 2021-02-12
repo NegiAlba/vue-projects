@@ -31,7 +31,7 @@
     <p>Ces composants peuvent comporter des props, c'est à dire des éléments qui varieront en fonction des données qui leur sont attribuées.</p>
     <Logo/>
     <p>Ces props sont assignables à des éléments statiques mais aussi à des variables/éléments dynamiques qui s'afficheront si ils sont définis et qui utiliseront la procédure de fallback définies au préalable (dans le cas où aucune fallback procedure n'est définie, l'élément ne s'affichera tout simplement pas)</p>
-    <Logo :bienvenue="message"/>
+    <Logo :bienvenue="message" :bounces="bounces"/>
     <p>Pour effectuer des transferts de données depuis l'enfant vers le parent, l'enfant doit initialiser l'action et le parent en récupérant cette action effectuera la modification de la donnée</p>
     <Logo bienvenue="Un message différent" v-on:sendBounce="squareIt"
     :bounces="bounces"/>
@@ -71,10 +71,10 @@ export default {
     clicked(){
       this.clicks++;
     },
-    squareIt(){
-      this.bounces = this.bounces*this.bounces;
-      return this.bounces;
-    }
+     squareIt(){
+       this.bounces = this.bounces*this.bounces;
+       return this.bounces;
+     }
   }
 }
 </script>
